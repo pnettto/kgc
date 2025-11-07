@@ -86,6 +86,17 @@ function initializeSearch() {
             this.blur();
         }
     });
+    
+    // Add clear button event listener
+    const clearBtn = document.getElementById('clearSearchBtn');
+    if (clearBtn) {
+        clearBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            clearSearch();
+            searchInput.focus();
+        });
+    }
 }
 
 function performSearch(query) {
