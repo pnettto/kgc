@@ -93,6 +93,7 @@ function initializeSearch() {
         clearBtn.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
+            searchInput.value = '';
             clearSearch();
             searchInput.focus();
         });
@@ -270,9 +271,6 @@ function navigateToFirstResult() {
 }
 
 function clearSearch() {
-    // Clear search input
-    searchInput.value = '';
-    
     // Remove search results display
     const existingResults = document.querySelector('.search-results');
     if (existingResults) {
