@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeScrollSpy();
     initializeMobileMenu();
     initializeAccessibility();
-    initializePrintFeatures();
 });
 
 // Navigation Functions
@@ -392,28 +391,6 @@ function initializeAccessibility() {
                 block: 'nearest'
             });
         });
-    });
-}
-
-// Print Features
-function initializePrintFeatures() {
-    // Add print button
-    const printButton = document.createElement('button');
-    printButton.textContent = 'Skriv ut';
-    printButton.className = 'print-button';
-    printButton.onclick = function() {
-        window.print();
-    };
-    
-    // Add to navigation area
-    const navSearch = document.querySelector('.nav-search');
-    if (navSearch) {
-        navSearch.appendChild(printButton);
-    }
-    
-    // Clean up before printing
-    window.addEventListener('beforeprint', function() {
-        clearSearch();
     });
 }
 
