@@ -1077,30 +1077,331 @@ li {
 
 /* Dark Theme */
 .dark-theme {
-    --neutral-50: #0f172a;
-    --neutral-100: #1e293b;
-    --neutral-200: #334155;
-    --neutral-300: #475569;
-    --neutral-400: #64748b;
-    --neutral-500: #94a3b8;
-    --neutral-600: #cbd5e1;
-    --neutral-700: #e2e8f0;
-    --neutral-800: #f1f5f9;
-    --neutral-900: #f8fafc;
+    /* Dark mode color palette */
+    --neutral-50: #0f172a;     /* Background */
+    --neutral-100: #1e293b;    /* Elevated background */
+    --neutral-200: #334155;    /* Borders */
+    --neutral-300: #475569;    /* Subtle borders */
+    --neutral-400: #64748b;    /* Disabled text */
+    --neutral-500: #94a3b8;    /* Secondary text */
+    --neutral-600: #cbd5e1;    /* Primary text */
+    --neutral-700: #e2e8f0;    /* Headings */
+    --neutral-800: #f1f5f9;    /* Strong emphasis */
+    --neutral-900: #f8fafc;    /* Brightest text */
     
-    --very-light-blue: #1e3a8a;
-    --light-blue: #1e40af;
-    --light-green: #166534;
-    --light-yellow: #a16207;
+    /* Adjusted colors for dark mode */
+    --primary-blue: #60a5fa;       /* Lighter blue for better contrast */
+    --secondary-blue: #3b82f6;     /* Brighter secondary blue */
+    --light-blue: #1e3a8a;         /* Dark blue background */
+    --very-light-blue: #1e40af;    /* Slightly lighter blue background */
+    --dark-blue: #93c5fd;          /* Inverted for headings */
+    
+    --accent-orange: #fb923c;      /* Brighter orange */
+    --light-orange: #431407;       /* Dark orange background */
+    
+    --accent-green: #86efac;       /* Brighter green */
+    --light-green: #052e16;        /* Dark green background */
+    
+    --tableau-green: #86efac;      /* Bright green */
+    --tableau-light-green: #14532d; /* Dark green background */
+    
+    --warning-yellow: #fbbf24;     /* Bright yellow */
+    --light-yellow: #422006;       /* Dark yellow background */
+    
+    /* Shadows for dark mode */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.5);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.5), 0 2px 4px -2px rgb(0 0 0 / 0.5);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5), 0 4px 6px -4px rgb(0 0 0 / 0.5);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.5), 0 8px 10px -6px rgb(0 0 0 / 0.5);
 }
 
 .dark-theme .navbar {
-    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+    border-bottom: 1px solid var(--neutral-300);
+}
+
+.dark-theme .sidebar {
+    background-color: var(--neutral-100);
+    border-right: 1px solid var(--neutral-300);
+}
+
+.dark-theme .nav-link {
+    color: var(--neutral-600);
+}
+
+.dark-theme .nav-link:hover {
+    background-color: var(--neutral-200);
+    color: var(--neutral-800);
+}
+
+.dark-theme .nav-link.active {
+    background-color: var(--primary-blue);
+    color: var(--neutral-50);
 }
 
 .dark-theme .search-highlight {
     background: #fbbf24;
     color: #0f172a;
+}
+
+/* Card and box styles for dark mode */
+.dark-theme .content-section,
+.dark-theme .word-class,
+.dark-theme .sentence-part,
+.dark-theme .tense-card,
+.dark-theme .time-question-section,
+.dark-theme .info-box,
+.dark-theme .note-box,
+.dark-theme .warning-box,
+.dark-theme .examples,
+.dark-theme .verb-example,
+.dark-theme .writing-aspect,
+.dark-theme .phrase-category {
+    background-color: var(--neutral-100);
+    border-color: var(--neutral-300);
+}
+
+.dark-theme .info-box {
+    background-color: #1e3a8a;
+    border-color: var(--primary-blue);
+}
+
+.dark-theme .note-box {
+    background-color: #14532d;
+    border-color: var(--tableau-green);
+}
+
+.dark-theme .warning-box {
+    background-color: #422006;
+    border-color: var(--warning-yellow);
+}
+
+/* Table styles for dark mode */
+.dark-theme table {
+    background-color: var(--neutral-100);
+}
+
+.dark-theme th {
+    background-color: var(--primary-blue);
+    color: var(--neutral-50);
+}
+
+.dark-theme td {
+    border-color: var(--neutral-300);
+}
+
+.dark-theme tr:hover {
+    background-color: var(--neutral-200);
+}
+
+/* Input styles for dark mode */
+.dark-theme input[type="text"],
+.dark-theme input[type="search"] {
+    background-color: var(--neutral-200);
+    border-color: var(--neutral-400);
+    color: var(--neutral-800);
+}
+
+.dark-theme input[type="text"]::placeholder,
+.dark-theme input[type="search"]::placeholder {
+    color: var(--neutral-500);
+}
+
+.dark-theme button {
+    background-color: var(--primary-blue);
+    color: var(--neutral-50);
+}
+
+.dark-theme button:hover {
+    background-color: var(--secondary-blue);
+}
+
+/* Special sections for dark mode */
+.dark-theme .informal-section,
+.dark-theme .formal-section,
+.dark-theme .informal-phrases,
+.dark-theme .formal-phrases {
+    background-color: var(--neutral-100);
+    border-color: var(--neutral-300);
+}
+
+.dark-theme .informal-section h3 {
+    background-color: #14532d;
+    color: var(--tableau-green);
+}
+
+.dark-theme .formal-section h3 {
+    background-color: #1e3a8a;
+    color: var(--primary-blue);
+}
+
+.dark-theme .writing-intro {
+    background-color: #422006;
+    border-color: var(--warning-yellow);
+}
+
+.dark-theme .course-requirements {
+    background-color: var(--neutral-100);
+}
+
+/* Highlight cards for dark mode */
+.dark-theme .highlight-card {
+    background-color: var(--neutral-100);
+    border-color: var(--neutral-300);
+}
+
+.dark-theme .highlight-card.blue {
+    background-color: #1e3a8a;
+    border-color: var(--primary-blue);
+}
+
+.dark-theme .highlight-card.green {
+    background-color: #14532d;
+    border-color: var(--tableau-green);
+}
+
+.dark-theme .highlight-card.orange {
+    background-color: #431407;
+    border-color: var(--accent-orange);
+}
+
+/* Word list styles */
+.dark-theme .word-list li,
+.dark-theme .phrase-examples {
+    background-color: var(--neutral-200);
+    border-color: var(--neutral-400);
+}
+
+/* Opinion/structure/advice phrases */
+.dark-theme .opinion-phrases,
+.dark-theme .structure-phrases,
+.dark-theme .advice-phrases {
+    background-color: #1e3a8a;
+    border-color: var(--primary-blue);
+}
+
+/* Additional dark mode refinements */
+.dark-theme .rule-column h3 {
+    background-color: #1e3a8a;
+    color: var(--primary-blue);
+}
+
+.dark-theme .theme-box {
+    background-color: var(--neutral-100);
+    border-color: var(--neutral-300);
+}
+
+.dark-theme .course-box {
+    background-color: var(--neutral-100);
+    border-color: var(--primary-blue);
+}
+
+.dark-theme .word-class {
+    background-color: #1e3a8a;
+    border-color: var(--primary-blue);
+}
+
+.dark-theme .sentence-part {
+    background-color: var(--neutral-100);
+    border-color: var(--neutral-300);
+}
+
+.dark-theme .examples {
+    background-color: var(--neutral-200);
+    border-color: var(--neutral-400);
+    color: var(--neutral-700);
+}
+
+/* Verb and tense cards */
+.dark-theme .verb-groups-table table,
+.dark-theme .auxiliary-verbs-table table,
+.dark-theme .tense-timeline table {
+    background-color: var(--neutral-100);
+}
+
+.dark-theme .verb-groups-table th,
+.dark-theme .auxiliary-verbs-table th,
+.dark-theme .tense-timeline th {
+    background-color: var(--primary-blue);
+    color: var(--neutral-50);
+}
+
+.dark-theme .verb-groups-table td,
+.dark-theme .auxiliary-verbs-table td,
+.dark-theme .tense-timeline td {
+    border-color: var(--neutral-300);
+}
+
+.dark-theme .verb-groups-table tr:hover,
+.dark-theme .auxiliary-verbs-table tr:hover,
+.dark-theme .tense-timeline tr:hover {
+    background-color: var(--neutral-200);
+}
+
+/* Navigation search */
+.dark-theme .nav-search input {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: var(--neutral-900);
+}
+
+.dark-theme .nav-search input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.dark-theme .nav-search button {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: var(--neutral-900);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.dark-theme .nav-search button:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Content header */
+.dark-theme .content-header {
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+    border-bottom: 1px solid var(--neutral-300);
+}
+
+.dark-theme .subtitle {
+    color: var(--neutral-400);
+}
+
+/* Code and monospace text */
+.dark-theme code,
+.dark-theme pre {
+    background-color: var(--neutral-200);
+    color: var(--accent-orange);
+}
+
+/* Links */
+.dark-theme a {
+    color: var(--primary-blue);
+}
+
+.dark-theme a:hover {
+    color: var(--secondary-blue);
+}
+
+/* Scrollbar styling for dark mode */
+.dark-theme ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+.dark-theme ::-webkit-scrollbar-track {
+    background: var(--neutral-100);
+}
+
+.dark-theme ::-webkit-scrollbar-thumb {
+    background: var(--neutral-400);
+    border-radius: 6px;
+}
+
+.dark-theme ::-webkit-scrollbar-thumb:hover {
+    background: var(--neutral-500);
 }
 
 /* Loading States */
