@@ -8,41 +8,41 @@
 }
 
 :root {
-    /* Tableau Color Palette */
-    --primary-blue: #4E79A7;          /* Tableau Blue */
-    --secondary-blue: #316395;        /* Darker Tableau Blue */
-    --light-blue: #E6F2FF;           /* Light Tableau Blue */
-    --very-light-blue: #F5FAFF;      /* Very Light Tableau Blue */
-    --dark-blue: #2A5783;            /* Dark Tableau Blue */
+    /* Professional Color Palette */
+    --primary-blue: #3B82F6;          /* Modern Blue */
+    --secondary-blue: #1E40AF;        /* Darker Blue */
+    --light-blue: #EFF6FF;           /* Light Blue Background */
+    --very-light-blue: #F8FAFC;      /* Very Light Blue */
+    --dark-blue: #1E3A8A;            /* Dark Blue */
     
-    --accent-orange: #F28E2C;        /* Tableau Orange */
-    --light-orange: #FFF4E6;         /* Light Tableau Orange */
+    --accent-orange: #F59E0B;        /* Amber Orange */
+    --light-orange: #FEF3C7;         /* Light Amber */
     
-    --accent-green: #7ace65;         /* Tableau Red (used as accent) */
-    --light-green: #e6ffe9;          /* Light Tableau Red */
+    --accent-green: #10B981;         /* Emerald Green (replaces wonky lime) */
+    --light-green: #D1FAE5;          /* Light Emerald */
     
-    --tableau-green: #70B77E;        /* Tableau Green */
-    --tableau-light-green: #E8F5EA;  /* Light Tableau Green */
+    --tableau-green: #059669;        /* Deeper Green */
+    --tableau-light-green: #ECFDF5;  /* Subtle Light Green */
     
-    --tableau-purple: #A0CBE8;       /* Tableau Light Blue */
-    --tableau-brown: #B07AA1;        /* Tableau Purple */
-    --tableau-pink: #FF9D9A;         /* Tableau Pink */
-    --tableau-gray: #BAB0AB;         /* Tableau Gray */
-    --tableau-yellow: #FFBE7D;       /* Tableau Yellow */
+    --tableau-purple: #8B5CF6;       /* Purple */
+    --tableau-brown: #92400E;        /* Brown */
+    --tableau-pink: #EC4899;         /* Pink */
+    --tableau-gray: #6B7280;         /* Gray */
+    --tableau-yellow: #F59E0B;       /* Yellow */
     
-    --neutral-50: #FAFAFA;
-    --neutral-100: #F5F5F5;
-    --neutral-200: #EEEEEE;
-    --neutral-300: #E0E0E0;
-    --neutral-400: #BDBDBD;
-    --neutral-500: #9E9E9E;
-    --neutral-600: #757575;
-    --neutral-700: #616161;
-    --neutral-800: #424242;
-    --neutral-900: #212121;
+    --neutral-50: #F8FAFC;
+    --neutral-100: #F1F5F9;
+    --neutral-200: #E2E8F0;
+    --neutral-300: #CBD5E1;
+    --neutral-400: #94A3B8;
+    --neutral-500: #64748B;
+    --neutral-600: #475569;
+    --neutral-700: #334155;
+    --neutral-800: #1E293B;
+    --neutral-900: #0F172A;
     
-    --warning-yellow: #FFBE7D;       /* Tableau Yellow for warnings */
-    --light-yellow: #FFF7E6;         /* Light Tableau Yellow */
+    --warning-yellow: #F59E0B;       /* Amber for warnings */
+    --light-yellow: #FEF3C7;         /* Light Amber */
     
     /* Typography */
     --font-family-main: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
